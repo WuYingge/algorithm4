@@ -133,3 +133,7 @@ dmypy.json
 
 #java
 *.class
+.class
+
+#data
+largeAllowlist.txt
