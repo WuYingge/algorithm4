@@ -23,6 +23,22 @@ public class BinarySearch {
         return index;
     }
 
+    private static int newRank(int key, int[] a) {
+        int start = 0;
+        int end = a.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (a[mid] < key) {
+                start = mid + 1;
+            } else if (a[mid] > key) {
+                end = mid - 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int length = Integer.parseInt(args[0]);
         int[] array = new int[length];
@@ -31,6 +47,8 @@ public class BinarySearch {
         }
         int key = Integer.parseInt(args[1]);
         int res = rank(key, array);
+        System.out.println(res);
+        res = newRank(key, array);
         System.out.println(res);
     }
 }
