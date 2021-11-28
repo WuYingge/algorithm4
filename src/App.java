@@ -2,18 +2,15 @@ import java.lang.System;
 
 public class App {
     public static void main(String[] args) {
-        Student s = new Student();
-        s.name = "aaa";
-        s.eat();
-    }
-
-    public static class Student {
-        String name;
-        int age;
-        float height;
-
-        public void eat() {
-            System.out.printf("");
+        String s = "asdfjkl";
+        String[] sList = s.split("");
+        for (String string : sList) {
+            System.out.println(string);
         }
     }
+
+    public class Student {
+
+    }
+
 }

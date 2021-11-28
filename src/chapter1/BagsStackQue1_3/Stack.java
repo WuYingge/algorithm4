@@ -23,11 +23,19 @@ public class Stack<Item> implements Iterable<Item> {
         N++;
     }
 
+    public int size() {
+        return N;
+    }
+
     public Item pop() {
         Item res = first.item;
         N--;
         first = first.next;
         return res;
+    }
+
+    public Item peek() {
+        return first.item;
     }
 
     public Iterator<Item> iterator() {
